@@ -1,5 +1,5 @@
 import os  # accessing the os functions
-import check_camera
+import checkCamera as check_camera
 
 
 
