@@ -35,8 +35,6 @@ def captureImages():
     name = input("Enter Your Name: ")
     xyz = pd.read_csv("StudentDetails"+os.sep+"StudentDetails.csv")
     checkId=list(xyz['Id'])
-    print(checkId)
-    print(int(Id) not in checkId)
     if(is_number(Id) and name.isalpha() and (int(Id) not in checkId)):
         cam = cv2.VideoCapture(0)
         harcascadePath = "haarcascade_frontalface_default.xml"
