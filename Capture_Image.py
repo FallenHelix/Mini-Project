@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 
 import cv2
 import os
@@ -32,8 +33,11 @@ def captureImages():
 
     Id = input("Enter Your Id: ")
     name = input("Enter Your Name: ")
-
-    if(is_number(Id) and name.isalpha()):
+    xyz = pd.read_csv("StudentDetails"+os.sep+"StudentDetails.csv")
+    checkId=list(xyz['Id'])
+    print(checkId)
+    print(int(Id) not in checkId)
+    if(is_number(Id) and name.isalpha() and (int(Id) not in checkId)):
         cam = cv2.VideoCapture(0)
         harcascadePath = "haarcascade_frontalface_default.xml"
         detector = cv2.CascadeClassifier(harcascadePath)
@@ -67,9 +71,9 @@ def captureImages():
             writer.writerow(row)
         csvFile.close()
     else:
-        if(is_number(Id)):
+        if(is_number(name)):
             print("Enter Alphabetical Name")
-        if(name.isalpha()):
+        if(Id.isalpha()):
             print("Enter Numeric ID")
-
-
+        if(int(Id) in checkId):
+            print("Duplicate entry")
