@@ -2,6 +2,6 @@
 Attendance/
 Images/
 frs/
-Training Images/
+TrainingImages/
 trained_knn_model.clf
 __pycache__/
