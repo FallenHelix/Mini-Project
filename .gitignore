@@ -1,0 +1,7 @@
+.vim/
+Attendance/
+Images/
+frs/
+Training Images/
+trained_knn_model.clf
+__pycache__/
