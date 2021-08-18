@@ -5,7 +5,6 @@
 Face Recognition Attendance System and record generation
 
 ## Features :clipboard:
----------------------------
 * Check Camera
 * Capture Faces
 * Train Faces
