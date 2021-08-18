@@ -34,6 +34,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 ```
+mkdir Attendance
 python run.py
 ```
 ![](screenshots/record.png)
