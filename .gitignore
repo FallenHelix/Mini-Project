@@ -5,3 +5,5 @@ frs/
 TrainingImages/
 trained_knn_model.clf
 __pycache__/
+.gitignore
+.pdf
